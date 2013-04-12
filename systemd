@@ -1,0 +1,14 @@
+[Unit]
+Description=Daemon that can download weather forecast
+Wants=network.target
+After=syslog.target
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/weather_daemon
+Group=weather_daemon
+Type=simple
+User=weather_daemon
+
+[Install]
+WantedBy=multi-user.target

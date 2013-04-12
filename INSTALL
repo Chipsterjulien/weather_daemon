@@ -1,0 +1,28 @@
+# How to install
+# ven. 12 avril 2013 à 13h31
+
+
+1. Copy weather_daemon.py to /usr/bin/weather_daemon
+
+2. Copy weather_daemon_example.conf to /etc
+
+3. If you use systemd, copy system_d to/usr/lib/systemd/system/weather_daemon.service
+
+4. Create /var/log/weather_daemon directory
+
+5. Create /usr/share/fonts/truetype/weather_daemon and copy fonts/* inside if you want use them with conky or another
+
+6. Create /usr/share/weather_daemon/icons/ and copy icons/* inside if you want use them with conky or another
+
+5. Create weather_daemon group (you prefere don't use a root process) :
+		getent group weather_daemon &>/dev/null || groupadd -r -g 465 weather_daemon >/dev/null
+		getent passwd weather_daemon &>/dev/null || useradd -r -u 465 -g weather_daemon -d /tmp -s /bin/bash >/dev/null weather_daemon
+
+6. Fixing some right :
+		chmod 644 "/etc/weather_daemon_example.conf"
+		chmod 755 "/var/log/weather_daemon"
+		chmod 755 "/usr/bin/weather_daemon"
+
+7. Fixing membership :
+		chown weather_daemon: "/etc/weather_daemon_example.conf"
+		chown weather_daemon: "/var/log/weather_daemon"
