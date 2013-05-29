@@ -1,0 +1,8 @@
+** Changelog
+
+   v0.3 - First changelog
+        - Use python-requests instead of urllib
+        - Rewrite of sleep function
+        - Solve some bugs
+
+**
