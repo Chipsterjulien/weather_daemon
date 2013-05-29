@@ -1,8 +1,16 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-#jeu. 08 nov. 2012
 
-# Depend of python-yaml, python-requests
+
+
+
+__author__    = "Julien Freyermuth"
+__copyright__ = "Copyright (c) 2013, Julien Freyermuth"
+__license__   = "GPL v3"
+__version__   = "0.3"
+
+
+
 
 import urllib.request
 import json, sys, os, time, copy, yaml, requests, logging
