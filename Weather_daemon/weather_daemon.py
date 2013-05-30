@@ -2,14 +2,12 @@
 # -*- coding: utf-8 -*-
 
 
-
-
-__author__    = "Julien Freyermuth"
-__copyright__ = "Copyright (c) 2013, Julien Freyermuth"
-__license__   = "GPL v3"
-__version__   = "0.3"
-
-
+__author__           = "Julien Freyermuth"
+__copyright__        = "Copyright (c) 2013, Julien Freyermuth"
+__license__          = "GPL v3"
+__version__          = "0.3"
+__description__      = "Daemon that can download weather forecast on wunderground"
+__long_description__ = "It's a python's script who download json's file on wunderground (You must register on wunderground). After, informations are wrote to /tmp/weather (see /etc/weather_daemon_example.conf). After you can display it on screen with conky or something else (dzen2, ...)"
 
 
 import urllib.request
